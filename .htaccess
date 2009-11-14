@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteRule ^([0-9]+)$ /forum/viewforum.php?id=$1
+RewriteRule ^topic/([0-9]+)$ /forum/viewtopic.php?id=$1
+RewriteRule ^topic/([0-9]+)/([0-9]+)$ /forum/viewtopic.php?id=$1&page=$2
+RewriteRule ^topic/([0-9]+)/([0-9]+)(#[0-9]+)$ /forum/viewtopic.php?id=$1&page=$2$3
+RewriteRule ^user/([0-9]+)$ /forum/viewuser.php?id=$1
+RewriteRule ^admin/_([a-z]+)$ /forum/admin/index.php?action=$1
+RewriteRule ^admin/(.*)\.sql$ /forum/admin/$1.php

@@ -1,0 +1,32 @@
+nullBB is a cool minimal CMS forum. Just the coolest CMS forum you've ever wished.
+
+== Installation ==
+
+Take a VERY DEEP LOOK to the config.ini file in your base directory. Everything you
+need to know and more, it's inside of there. Just follow the steps inside of there,
+in particular COMMENT OR SET TO FALSE THE $UNCONFIGURE VARIABLE once you've
+configured your CMS, set the BASEDIR macro to your installation directory inside your
+web server (e.g., if you have installed nullBB in $SERVDIR/nullbb, e.g.
+/var/www/htdocs/nullbb, BASEDIR should be /nullbb/), set the ABSOLUTE_BASEPATH (e.g.
+/var/www/htdocs/nullbb/) and the parameters to connect to your database (db name,
+user, pass, host). Once you've modified config.ini the way you like, access to the
+URL of your brand new nullBB installation (e.g. http://yoursite.com/nullbb), set your
+admin username, password and email, and everything is ready.
+
+Oh, I forgot, so far nullBB requires ModRewrite to be enabled and the RewriteEngine
+enabled in your installation's base directory. Just specify the right AllowOverride
+option in your httpd.conf file to enable .htaccess support onto your installation
+directory.
+
+== Themes ==
+
+If you want to create a new theme, just take a look at the default themes in /themes
+directory, and do the same. A theme in nullBB is just a CSS file contained inside
+/themes/THEMENAME directory. Just put your theme there, and it's ready to be used.
+
+== Languages ==
+
+nullBB supports multiple languages contents. All you have to do to add a new language
+support, it's to add a .lang file in /languages directory. Just take a look at the
+default files to see how to do it.
+
