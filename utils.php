@@ -152,10 +152,12 @@ function bb2html($text)  {
 	}
 
 	if (preg_match_all('/\[url\](.*?)\[\/url\]/ims', $newtext, $match))  {
-		$url = $match[1][0];
-		$newurl  = str_replace ('"', '', $url);
-		$newtext = str_ireplace ("[url]".$url."[/url]",
-				'<a target="_new" href="'.$newurl.'">'.$newurl.'</a>', $newtext);
+		for ($i=0; $i < count($match[1]); $i++)  {
+			$url = $match[1][$i];
+			$newurl  = str_replace ('"', '', $url);
+			$newtext = str_ireplace ("[url]".$url."[/url]",
+					'<a target="_new" href="'.$newurl.'">'.$newurl.'</a>', $newtext);
+		}
 	}
 
 	if (preg_match_all('/\[url=([^\]]+)\](.*?)\[\/url\]/ims', $newtext, $match))  {
