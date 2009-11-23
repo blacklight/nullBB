@@ -317,7 +317,8 @@ $htaccess =
 'RewriteRule ^topic/([0-9]+)/([0-9]+)(#[0-9]+)$ '.BASEDIR.'viewtopic.php?id=$1&page=$2$3'."\n".
 'RewriteRule ^user/([0-9]+)$ '.BASEDIR.'viewuser.php?id=$1'."\n".
 'RewriteRule ^admin/_([a-z]+)$ '.BASEDIR.'admin/index.php?action=$1'."\n".
-'RewriteRule ^admin/(.*)\.sql$ '.BASEDIR.'admin/$1.php'."\n";
+'RewriteRule ^admin/(.*)\.sql$ '.BASEDIR.'admin/$1.php'."\n".
+"RewriteRule .*ini$ ".BASEDIR."missing.php\n";
 
 fputs ($fp, $htaccess);
 fclose($fp);
